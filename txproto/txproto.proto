@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package="tx-poc/txproto/transaction";
+
+service Transactions{
+    rpc SendTx (TxRequest) returns (TxReply){}
+}
+
+message TxRequest{
+    string payload = 2;
+}
+
+message TxReply{
+    string body = 1;
+}
